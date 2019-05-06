@@ -30,7 +30,7 @@
   (let [repo (gitp/git-init path)
         build-file (build-file path)
         branch (format "b-%s" version)
-        msg (format "Bumped version to %s" version)]
+        msg (format "chore: Bumped version to %s" version)]
     (gitp/git-checkout repo "develop")
     (gitp/git-pull repo "upstream")
     (gitp/git-branch-create repo branch)
