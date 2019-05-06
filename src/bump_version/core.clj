@@ -9,7 +9,7 @@
 (def version-regexp #"^version *'\d+\.\d+\.\d+-SNAPSHOT'")
 
 (defn build-file
-  "Returns th File for the build.gradle in this path"
+  "Returns the File for the build.gradle in this path"
   [path]
   (let [build-file (format "%s/build.gradle" path)]
     (io/as-file build-file)))
@@ -60,3 +60,4 @@
       has-build-file (println "You must provide a version to bump to")
       (and path version) (println "You must provide the path to a folder with a build.gradle")
       :else (println "You must provide the path to a folder with a build.gradle and a version to bump to"))))
+
