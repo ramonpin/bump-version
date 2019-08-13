@@ -5,8 +5,11 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [clj-jgit "0.8.10"]
-                 [environ "1.1.0"]]
+                 [environ "1.1.0"]
+                 [proto-repl "0.3.1"]
+                 [org.clojure/tools.namespace "0.2.11"]
+                 [org.slf4j/slf4j-nop "1.7.27"]]
   :main ^:skip-aot bump-version.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}})
-
+  :profiles {:uberjar {:aot :all}}
+  :javac-options ["-target" "1.8" "-source" "1.8" "-Xlint:-options"])
